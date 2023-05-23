@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		750F43EB2A067B3A008C99B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750F43EA2A067B3A008C99B1 /* AppDelegate.swift */; };
 		750F43ED2A067B3A008C99B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750F43EC2A067B3A008C99B1 /* SceneDelegate.swift */; };
-		750F43F42A067B3C008C99B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 750F43F32A067B3C008C99B1 /* Assets.xcassets */; };
 		750F43F72A067B3C008C99B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 750F43F52A067B3C008C99B1 /* LaunchScreen.storyboard */; };
 		755804652A1107A300856393 /* HabitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755804642A1107A300856393 /* HabitCollectionViewCell.swift */; };
 		755804672A1107C200856393 /* HabitDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755804662A1107C200856393 /* HabitDetailsViewController.swift */; };
@@ -18,13 +17,13 @@
 		755A0E8C2A07BB2200E9EF72 /* HabitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755A0E8B2A07BB2200E9EF72 /* HabitsViewController.swift */; };
 		755A0E8E2A07BB3A00E9EF72 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755A0E8D2A07BB3A00E9EF72 /* InfoViewController.swift */; };
 		7593D5E62A0D17B1001EF913 /* HabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7593D5E52A0D17B0001EF913 /* HabitViewController.swift */; };
+		75B96C332A1C73C5003A16DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75B96C322A1C73C5003A16DC /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		750F43E72A067B3A008C99B1 /* MyHabits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHabits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		750F43EA2A067B3A008C99B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		750F43EC2A067B3A008C99B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		750F43F32A067B3C008C99B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		750F43F62A067B3C008C99B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		750F43F82A067B3C008C99B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		755804642A1107A300856393 /* HabitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -34,6 +33,7 @@
 		755A0E8B2A07BB2200E9EF72 /* HabitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsViewController.swift; sourceTree = "<group>"; };
 		755A0E8D2A07BB3A00E9EF72 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		7593D5E52A0D17B0001EF913 /* HabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewController.swift; sourceTree = "<group>"; };
+		75B96C322A1C73C5003A16DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,12 +72,12 @@
 				755A0E8B2A07BB2200E9EF72 /* HabitsViewController.swift */,
 				7593D5E52A0D17B0001EF913 /* HabitViewController.swift */,
 				755A0E8D2A07BB3A00E9EF72 /* InfoViewController.swift */,
-				750F43F32A067B3C008C99B1 /* Assets.xcassets */,
 				750F43F52A067B3C008C99B1 /* LaunchScreen.storyboard */,
 				750F43F82A067B3C008C99B1 /* Info.plist */,
 				755804642A1107A300856393 /* HabitCollectionViewCell.swift */,
 				755804662A1107C200856393 /* HabitDetailsViewController.swift */,
 				755804682A1107F200856393 /* ProgressCollectionViewCell.swift */,
+				75B96C322A1C73C5003A16DC /* Assets.xcassets */,
 			);
 			path = MyHabits;
 			sourceTree = "<group>";
@@ -140,8 +140,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75B96C332A1C73C5003A16DC /* Assets.xcassets in Resources */,
 				750F43F72A067B3C008C99B1 /* LaunchScreen.storyboard in Resources */,
-				750F43F42A067B3C008C99B1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +303,6 @@
 				INFOPLIST_FILE = MyHabits/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -333,7 +332,6 @@
 				INFOPLIST_FILE = MyHabits/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

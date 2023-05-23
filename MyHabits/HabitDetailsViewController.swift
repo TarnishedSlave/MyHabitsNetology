@@ -83,7 +83,7 @@ extension HabitDetailsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return HabitsStore.shared.dates.count - 1
+        return HabitsStore.shared.dates.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -91,7 +91,7 @@ extension HabitDetailsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let formatter = DateFormatter()
         formatter.dateFormat = "d MMMM yyyy"
-        cell.textLabel?.text = HabitsStore.shared.trackDateString(forIndex: HabitsStore.shared.dates.count - indexPath.row - 2)
+        cell.textLabel?.text = HabitsStore.shared.trackDateString(forIndex: HabitsStore.shared.dates.count - indexPath.row - 1)
 
         if HabitsStore.shared.habit(currentHabit!, isTrackedIn: HabitsStore.shared.dates [HabitsStore.shared.dates.count - indexPath.row - 2]) {
             cell.accessoryView = UIImageView(image: UIImage(systemName: "checkmark", withConfiguration: .none))

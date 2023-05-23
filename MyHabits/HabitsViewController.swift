@@ -119,10 +119,11 @@ extension HabitsViewController: UICollectionViewDataSource {
              let store = HabitsStore.shared
              let habit = store.habits[indexPath.row]
              cell.habitTitle.text = habit.name
-             cell.habitTitle.textColor = habit.color
+             cell.habitTitle.textColor = UIColor.black
              cell.habitCheckBox.tintColor = habit.color
              cell.habitTime.text = habit.dateString
 
+        
              if habit.isAlreadyTakenToday {
              cell.habitCheckBox.setImage(UIImage(systemName: "checkmark.circle.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 40)), for: .normal)
              } else {
