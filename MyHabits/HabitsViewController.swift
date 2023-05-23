@@ -101,45 +101,50 @@ extension HabitsViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
-
-            case 0:
+        case 0:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProgressCollectionViewCell.id, for: indexPath) as? ProgressCollectionViewCell else {
-                fatalError("could not dequeueReusableCell")
+                fatalError("Could not dequeueReusableCell")
             }
             let store = HabitsStore.shared
-            cell.habitProgress.text = String (format: "%.0f", store.todayProgress*100) + "%"
+            cell.habitProgress.text = String(format: "%.0f", store.todayProgress * 100) + "%"
             cell.habitProgressView.progress = store.todayProgress
             return cell
 
-
-             case 1:
-             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HabitCollectionViewCell.id, for: indexPath) as? HabitCollectionViewCell else {
-             fatalError("could not dequeueReusableCell")
-             }
-             let store = HabitsStore.shared
-             let habit = store.habits[indexPath.row]
-             cell.habitTitle.text = habit.name
-             cell.habitTitle.textColor = UIColor.black
-             cell.habitCheckBox.tintColor = habit.color
-             cell.habitTime.text = habit.dateString
+        case 1:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HabitCollectionViewCell.id, for: indexPath) as? HabitCollectionViewCell else {
+                fatalError("Could not dequeueReusableCell")
+            }
+            let store = HabitsStore.shared
+            let habit = store.habits[indexPath.row]
+            cell.habitTitle.text = habit.name
+            cell.habitTime.text = habit.dateString
 
 
-             if habit.isAlreadyTakenToday {
-             cell.habitCheckBox.setImage(UIImage(systemName: "checkmark.circle.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 40)), for: .normal)
-             } else {
-             cell.habitCheckBox.setImage(UIImage(systemName: "circle", withConfiguration: UIImage.SymbolConfiguration(pointSize: 40)), for: .normal)
-             }
-             cell.habitCounter.text = "Счетчик: \(habit.trackDates.count)"
+            // Проверяем, является ли цвет habit.color белым
+            if habit.color == UIColor(red: 1, green: 1, blue: 1, alpha: 1.0) {
+                cell.habitTitle.textColor = UIColor.black
+                cell.habitCheckBox.tintColor = UIColor.black
+            } else {
+                cell.habitTitle.textColor = habit.color
+                cell.habitCheckBox.tintColor = habit.color
+            }
 
-             cell.completionHandler = {
-             collectionView.reloadData()
-             }
-             return cell
+            if habit.isAlreadyTakenToday {
+                cell.habitCheckBox.setImage(UIImage(systemName: "checkmark.circle.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 40)), for: .normal)
+            } else {
+                cell.habitCheckBox.setImage(UIImage(systemName: "circle", withConfiguration: UIImage.SymbolConfiguration(pointSize: 40)), for: .normal)
+            }
+            cell.habitCounter.text = "Счетчик: \(habit.trackDates.count)"
 
-             default: break
-             }
-             return UICollectionViewCell ()
+            cell.completionHandler = {
+                collectionView.reloadData()
+            }
+            return cell
+
+        default:
+            fatalError("Invalid section")
         }
+    }
 }
 
 extension HabitsViewController: UICollectionViewDelegateFlowLayout {

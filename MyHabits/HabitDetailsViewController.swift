@@ -93,7 +93,7 @@ extension HabitDetailsViewController: UITableViewDataSource {
         formatter.dateFormat = "d MMMM yyyy"
         cell.textLabel?.text = HabitsStore.shared.trackDateString(forIndex: HabitsStore.shared.dates.count - indexPath.row - 1)
 
-        if HabitsStore.shared.habit(currentHabit!, isTrackedIn: HabitsStore.shared.dates [HabitsStore.shared.dates.count - indexPath.row - 2]) {
+        if HabitsStore.shared.habit(currentHabit!, isTrackedIn: HabitsStore.shared.dates [HabitsStore.shared.dates.count - indexPath.row - 1]) {
             cell.accessoryView = UIImageView(image: UIImage(systemName: "checkmark", withConfiguration: .none))
         }
         return cell
