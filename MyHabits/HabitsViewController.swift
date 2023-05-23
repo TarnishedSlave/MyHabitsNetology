@@ -123,7 +123,7 @@ extension HabitsViewController: UICollectionViewDataSource {
              cell.habitCheckBox.tintColor = habit.color
              cell.habitTime.text = habit.dateString
 
-        
+
              if habit.isAlreadyTakenToday {
              cell.habitCheckBox.setImage(UIImage(systemName: "checkmark.circle.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 40)), for: .normal)
              } else {
